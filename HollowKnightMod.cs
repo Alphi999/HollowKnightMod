@@ -13,7 +13,7 @@ namespace HollowKnightMod
 
         private new Texture2D GetTexture(string tex)
         {
-            return base.GetTexture("Textures/Mask");
+            return base.GetTexture("$Textures/{tex}");
         }
 
         public override void Load()
