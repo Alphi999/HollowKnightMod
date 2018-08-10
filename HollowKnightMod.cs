@@ -10,6 +10,7 @@ namespace HollowKnightMod
     {
         public static Texture2D OriginalLifeCrystalTexture;
         public static Texture2D OriginalheartTexture;
+        public static Texture2D Originalheart2Texture;
 
         public HollowKnightMod()
         {
@@ -21,12 +22,17 @@ namespace HollowKnightMod
 
             OriginalheartTexture = Main.heartTexture;
             Main.heartTexture = this.GetTexture("Textures/Mask");
+
+            Originalheart2Texture = Main.heart2Texture;
+            Main.heart2Texture = this.GetTexture("Textures/Lifeblood_Mask");
         }
         public override void Unload()
         {
             Main.itemTexture[29] = OriginalLifeCrystalTexture;
 
             Main.heartTexture = OriginalheartTexture;
+
+            Main.heart2Texture = Originalheart2Texture;
         }
     }
 }
