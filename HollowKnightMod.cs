@@ -1,34 +1,33 @@
+using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace HollowKnightMod
 {
-    // ReSharper disable once UnusedMember.Global
     public class HollowKnightMod : Mod
     {
-        private Texture2D _origLifeCrystal;
-        private Texture2D _origHeart;
+        public static Texture2D OriginalLifeCrystalTexture;
+        public static Texture2D OriginalheartTexture;
 
-        private new Texture2D GetTexture(string tex)
+        public HollowKnightMod()
         {
-            return base.GetTexture($"Textures/{tex}");
         }
-
         public override void Load()
         {
-            _origLifeCrystal = Main.itemTexture[29];
-            Main.itemTexture[ItemID.LifeCrystal] = GetTexture("Mask_Shard");
+            OriginalLifeCrystalTexture = Main.itemTexture[29];
+            Main.itemTexture[29] = this.GetTexture("Textures/Mask_Shard");
 
-            _origHeart = Main.heartTexture;
-            Main.heartTexture = GetTexture("Mask");
+            OriginalheartTexture = Main.heartTexture;
+            Main.heartTexture = this.GetTexture("Textures/Mask");
         }
-
         public override void Unload()
         {
-            Main.itemTexture[ItemID.LifeCrystal] = _origLifeCrystal;
-            Main.heartTexture = _origHeart;
+            Main.itemTexture[29] = OriginalLifeCrystalTexture;
+
+            Main.heartTexture = OriginalheartTexture;
         }
     }
 }
+
