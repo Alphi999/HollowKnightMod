@@ -24,7 +24,7 @@ namespace HollowKnightMod.Projectiles
             projectile.width = 64;
             projectile.height = 60;
             projectile.friendly = true;
-            projectile.penetrate = -1;
+            projectile.penetrate = 1;
             projectile.tileCollide = false;
             projectile.melee = true;
             projectile.ownerHitCheck = true;
@@ -54,8 +54,8 @@ namespace HollowKnightMod.Projectiles
             projectile.spriteDirection = projectile.direction;
             player.ChangeDir(projectile.direction);
             player.heldProj = projectile.whoAmI;
-            player.itemTime = 2;
-            player.itemAnimation = 2;
+            player.itemTime = 3;
+            player.itemAnimation = 3;
         }
     }
 }

@@ -18,19 +18,19 @@ namespace HollowKnightMod.Items
             item.melee = true;
             item.width = 40;
             item.height = 40;
-            item.useTime = 20;
+            item.useTime = 55;
             item.knockBack = 6;
-            item.value = 10000;
+            item.value = Terraria.Item.sellPrice(0, 50, 0, 0);
             item.rare = 2;
             item.UseSound = SoundID.Item1;
             item.shoot = mod.ProjectileType("OldNail");
-            item.useAnimation = 25;
+            item.useAnimation = 50;
             item.useStyle = 5;
             item.noUseGraphic = true;
             item.noMelee = true;
             item.autoReuse = false;
             item.noMelee = true;
-            item.shootSpeed = 0f;
+            item.shootSpeed = 1f;
         }
 
         /*public override void AddRecipes()
