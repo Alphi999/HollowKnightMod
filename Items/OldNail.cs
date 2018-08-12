@@ -9,7 +9,7 @@ namespace HollowKnightMod.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Old Nail");
-            Tooltip.SetDefault("The remains of an old nail, wilted with age.");
+            Tooltip.SetDefault("A traditional weapon of Hallownest, wilted with age.");
         }
 
         public override void SetDefaults()
@@ -19,8 +19,8 @@ namespace HollowKnightMod.Items
             item.width = 40;
             item.height = 40;
             item.useTime = 55;
-            item.knockBack = 6;
-            item.value = Terraria.Item.sellPrice(0, 50, 0, 0);
+            item.knockBack = 4;
+            item.value = Terraria.Item.sellPrice(0, 0, 0, 0);
             item.rare = 2;
             item.UseSound = SoundID.Item1;
             item.shoot = mod.ProjectileType("OldNail");
