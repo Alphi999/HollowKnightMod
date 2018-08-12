@@ -9,6 +9,8 @@ namespace HollowKnightMod
     public class HollowKnightMod : Mod
     {
         public static Texture2D OriginalLifeCrystalTexture;
+        public static Texture2D OriginalLifeFruitTexture
+        public static Texture2D OriginalLifeFruitTileTexture;
         public static Texture2D OriginalheartTexture;
         public static Texture2D Originalheart2Texture;
 
@@ -20,6 +22,12 @@ namespace HollowKnightMod
             OriginalLifeCrystalTexture = Main.itemTexture[29];
             Main.itemTexture[29] = this.GetTexture("Textures/Mask_Shard");
 
+            OriginalLifeFruitTexture = Main.itemTexture[1291];
+            Main.itemTexture[1291] = this.GetTexutre("Textures/Lifeblood_Fruit");
+
+            OriginalLifeFruitTileTexture = Main.tileTexture[236];
+            Main.tileTexture[236] = this.GetTexture("Texture/Lifeblood_Cocoon");
+
             OriginalheartTexture = Main.heartTexture;
             Main.heartTexture = this.GetTexture("Textures/Mask");
 
@@ -29,6 +37,10 @@ namespace HollowKnightMod
         public override void Unload()
         {
             Main.itemTexture[29] = OriginalLifeCrystalTexture;
+
+            Main.itemTexture[1291] = OriginalLifeFruitTexture;
+
+            Main.tileTexture[236] = OriginalLifeFruitTileTexture;
 
             Main.heartTexture = OriginalheartTexture;
 
