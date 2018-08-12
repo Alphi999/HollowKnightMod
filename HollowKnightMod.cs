@@ -26,7 +26,7 @@ namespace HollowKnightMod
             Main.itemTexture[1291] = this.GetTexture("Textures/Lifeblood_Fruit");
 
             OriginalLifeFruitTileTexture = Main.tileTexture[236];
-            Main.tileTexture[236] = this.GetTexture("Texture/Lifeblood_Cocoon");
+            Main.tileTexture[236] = this.GetTexture("Textures/Lifeblood_Cocoon");
 
             OriginalheartTexture = Main.heartTexture;
             Main.heartTexture = this.GetTexture("Textures/Mask");
