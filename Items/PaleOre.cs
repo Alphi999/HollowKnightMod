@@ -19,7 +19,10 @@ namespace HollowKnightMod.Items
 
         public override void SetDefaults()
         {
-            
+            item.width = 26;
+            item.height = 26;
+            item.value = 0;
+            item.maxStack = 999;
         }
     }
 }
