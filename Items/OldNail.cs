@@ -16,8 +16,8 @@ namespace HollowKnightMod.Items
         {
             item.damage = 20;
             item.melee = true;
-            item.width = 40;
-            item.height = 40;
+            item.width = 26;
+            item.height = 70;
             item.useTime = 55;
             item.knockBack = 4;
             item.value = Terraria.Item.sellPrice(0, 0, 0, 0);
